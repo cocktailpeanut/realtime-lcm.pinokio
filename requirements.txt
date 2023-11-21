@@ -1,0 +1,12 @@
+git+https://github.com/huggingface/diffusers@6f1435332bc74e286af5e88014236e4cc712b747
+transformers==4.35.2
+#--extra-index-url https://download.pytorch.org/whl/cu121;
+#torch==2.1.0
+fastapi[all]
+#uvicorn[standard]==0.24.0.post1
+Pillow==10.1.0
+accelerate==0.24.0
+compel==2.0.2
+controlnet-aux==0.0.7
+peft==0.6.0
+xformers; sys_platform != 'darwin' or platform_machine != 'arm64'
