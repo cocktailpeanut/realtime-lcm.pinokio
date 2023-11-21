@@ -1,5 +1,7 @@
 module.exports = {
   title: "Realtime LCM",
+  icon: "icon.png",
+  description: "Demo showcasing ~real-time Latent Consistency Model pipeline with Diffusers and a MJPEG stream server (https://github.com/radames/Real-Time-Latent-Consistency-Model)",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "app", "venv")
     if (installed) {

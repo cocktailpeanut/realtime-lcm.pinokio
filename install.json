@@ -23,6 +23,6 @@
     "params": { "title": "Install Success", "description": "Go back to the dashboard and launch the app!" }
   }, {
     "method": "browser.open",
-    "params": { "uri": "/?selected=RTLCM" }
+    "params": { "uri": "/?selected=Realtime LCM" }
   }]
 }
