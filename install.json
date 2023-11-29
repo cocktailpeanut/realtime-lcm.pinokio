@@ -19,7 +19,7 @@
       "venv": "venv",
       "path": "app",
       "message": [
-        "{{(gpu === 'amd' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}",
+        "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}",
         "pip install -r ../requirements.txt"
       ]
     }
