@@ -15,6 +15,7 @@ module.exports = {
         return [
           { icon: "fa-solid fa-power-off", text: "sd-turbo-controlnet", href: "start.json", params: { fullscreen: true, run: true, pipeline: "controlnelSD21Turbo" } },
           { icon: "fa-solid fa-power-off", text: "sdxl-turbo-controlnet", href: "start.json", params: { fullscreen: true, run: true, pipeline: "controlnetSDXLTurbo" } },
+          { icon: "fa-solid fa-power-off", text: "sdxl-turbo-img2img", href: "start.json", params: { fullscreen: true, run: true, pipeline: "img2imgSDXLTurbo" } },
           { icon: "fa-solid fa-power-off", text: "txt2img", href: "start.json", params: { fullscreen: true, run: true, pipeline: "txt2img"} },
           { icon: "fa-solid fa-power-off", text: "img2img", href: "start.json", params: { fullscreen: true, run: true, pipeline: "img2img"} },
           { icon: "fa-solid fa-power-off", text: "controlnet", href: "start.json", params: { fullscreen: true, run: true, pipeline: "controlnet"} },
