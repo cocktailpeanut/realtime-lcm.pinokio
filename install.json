@@ -28,6 +28,6 @@
     "params": { "title": "Install Success", "description": "Go back to the dashboard and launch the app!" }
   }, {
     "method": "browser.open",
-    "params": { "uri": "/?selected=Realtime LCM" }
+    "params": { "uri": "/?selected=Realtime Stablediffusion" }
   }]
 }
