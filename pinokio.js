@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Realtime LCM",
+  title: "Realtime StableDiffusion",
   icon: "icon.png",
   description: "Demo showcasing ~real-time Latent Consistency Model pipeline with Diffusers and a MJPEG stream server (https://github.com/radames/Real-Time-Latent-Consistency-Model)",
   menu: async (kernel) => {
@@ -13,6 +13,7 @@ module.exports = {
         ]
       } else {
         return [
+          { icon: "fa-solid fa-power-off", text: "sd-turbo-controlnet", href: "start.json", params: { fullscreen: true, run: true, pipeline: "controlnelSD21Turbo" } },
           { icon: "fa-solid fa-power-off", text: "txt2img", href: "start.json", params: { fullscreen: true, run: true, pipeline: "txt2img"} },
           { icon: "fa-solid fa-power-off", text: "img2img", href: "start.json", params: { fullscreen: true, run: true, pipeline: "img2img"} },
           { icon: "fa-solid fa-power-off", text: "controlnet", href: "start.json", params: { fullscreen: true, run: true, pipeline: "controlnet"} },
