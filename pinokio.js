@@ -4,13 +4,25 @@ module.exports = {
   description: "Demo showcasing ~real-time Latent Consistency Model pipeline with Diffusers and a MJPEG stream server (https://github.com/radames/Real-Time-Latent-Consistency-Model)",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "app", "venv")
-    if (installed) {
-      let running = await kernel.running(__dirname, "start.json")
+    let running = await kernel.running(__dirname, "start.json")
+    let installing = await kernel.running(__dirname, "install.json")
+    if (installing) {
+      return [{ icon: "fa-solid fa-plug", text: "Installing", href: "install.json", params: { fullscreen: true } }]
+    } else if (installed) {
       if (running) {
-        return [
-          { icon: "fa-solid fa-spin fa-circle-notch", text: "Running" },
-          { icon: "fa-solid fa-terminal", text: "Terminal", href: "start.json" }
-        ]
+        let session = await kernel.require(__dirname, "session.json")
+        if (session && session.url) {
+          return [
+            { icon: "fa-solid fa-spin fa-circle-notch", text: "Running" },
+            { icon: "fa-solid fa-rocket", text: "Web UI", href: session.url, target: "_blank" },
+            { icon: "fa-solid fa-terminal", text: "Terminal", href: "start.json", params: { fullscreen: true } }
+          ]
+        } else {
+          return [
+            { icon: "fa-solid fa-spin fa-circle-notch", text: "Running" },
+            { icon: "fa-solid fa-terminal", text: "Terminal", href: "start.json", params: { fullscreen: true } }
+          ]
+        }
       } else {
         return [
           { icon: "fa-solid fa-power-off", text: "sd-turbo-controlnet", href: "start.json", params: { fullscreen: true, run: true, pipeline: "controlnelSD21Turbo" } },
