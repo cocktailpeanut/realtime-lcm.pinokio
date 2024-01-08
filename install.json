@@ -6,7 +6,7 @@
   },
   "run": [{
     "method": "shell.run",
-    "params": { "message": "git clone https://github.com/radames/Real-Time-Latent-Consistency-Model app" }
+    "params": { "message": "git clone https://github.com/cocktailpeanut/Real-Time-Latent-Consistency-Model app" }
   }, {
     "method": "shell.run",
     "params": {

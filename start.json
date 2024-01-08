@@ -6,7 +6,7 @@
       "params": {
         "venv": "venv",
         "path": "app",
-        "message": "python run.py --pipeline {{input.pipeline}} --host 127.0.0.1",
+        "message": "python server/main.py --pipeline {{input.pipeline}} --host 127.0.0.1",
         "on": [
           {
             "event": "/https?:\/\/[0-9.:]+/",
